@@ -1,0 +1,22 @@
+PODS:
+  - Freddy (2.0.2)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Freddy (~> 2.0)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
