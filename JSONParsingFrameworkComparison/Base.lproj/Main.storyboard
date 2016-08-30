@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10112" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Avo-nD-c9Z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
+        <!--Freddy View Controller-->
+        <scene sceneID="mEy-0o-chX">
+            <objects>
+                <viewController id="5cA-9J-wzt" customClass="FreddyViewController" customModule="JSONParsingFrameworkComparison" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v6T-hL-rlT"/>
+                        <viewControllerLayoutGuide type="bottom" id="kae-Uy-JOQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aKi-3z-PS9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltC-Nu-XUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="-341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nug-kJ-fPm">
+            <objects>
+                <navigationController id="Avo-nD-c9Z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mWG-mt-Vu4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tv9-J1-rYk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vd3-Xu-BLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="319"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +50,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-8k-8br">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="Freddy"/>
+                                <connections>
+                                    <segue destination="5cA-9J-wzt" kind="show" id="lB7-Yy-Gzh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr1-Ls-24m">
+                                <rect key="frame" x="260" y="337" width="81" height="30"/>
+                                <state key="normal" title="SwiftyJSON"/>
+                                <connections>
+                                    <segue destination="82r-iF-EIU" kind="show" id="gsI-0m-ii2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZU-Yt-mOa">
+                                <rect key="frame" x="228" y="387" width="144" height="30"/>
+                                <state key="normal" title="NSJSONSerialization"/>
+                                <connections>
+                                    <segue destination="LPU-bV-HaJ" kind="show" id="Xu4-k9-qQp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XHJ-8k-8br" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C89-GN-nkg"/>
+                            <constraint firstItem="hZU-Yt-mOa" firstAttribute="centerX" secondItem="zr1-Ls-24m" secondAttribute="centerX" id="Nup-jD-8Yu"/>
+                            <constraint firstItem="hZU-Yt-mOa" firstAttribute="top" secondItem="zr1-Ls-24m" secondAttribute="bottom" constant="20" id="jgN-qg-Q0H"/>
+                            <constraint firstItem="zr1-Ls-24m" firstAttribute="centerX" secondItem="XHJ-8k-8br" secondAttribute="centerX" id="lXA-Wj-Att"/>
+                            <constraint firstItem="zr1-Ls-24m" firstAttribute="top" secondItem="XHJ-8k-8br" secondAttribute="bottom" constant="22" id="oSe-ox-4VO"/>
+                            <constraint firstItem="XHJ-8k-8br" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3Q-Ml-gXe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sFW-lC-whJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iGN-5Z-tA5">
+            <objects>
+                <viewController id="LPU-bV-HaJ" customClass="NSJSONViewController" customModule="JSONParsingFrameworkComparison" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zox-tW-vs5"/>
+                        <viewControllerLayoutGuide type="bottom" id="sTq-pS-OWk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R9g-Ev-dUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDX-d0-bIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="1037"/>
+        </scene>
+        <!--Swifty View Controller-->
+        <scene sceneID="k5T-lh-a6d">
+            <objects>
+                <viewController id="82r-iF-EIU" customClass="SwiftyViewController" customModule="JSONParsingFrameworkComparison" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AkH-lW-LgS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nbx-Jh-jwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TTL-Ue-y4A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0L-DA-fej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="367"/>
         </scene>
     </scenes>
 </document>

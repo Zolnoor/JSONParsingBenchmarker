@@ -15,6 +15,21 @@
             hideIssues = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B6A74AAA3DA51A957D0E3F88FC93819"
+               BuildableName = "Pods_JSONParsingFrameworkComparison.framework"
+               BlueprintName = "Pods-JSONParsingFrameworkComparison"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES"
+            hideIssues = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BAEB8451C8F637E00E294DA"
                BuildableName = "JSONParsingFrameworkComparison.app"
                BlueprintName = "JSONParsingFrameworkComparison"
